@@ -4,17 +4,67 @@
   <meta charset="utf-8">
   
   
-  <title>Lee&#39;s Blog🤦‍♂️</title>
+  <title>WWDC21 App Clip 新特性 | Lee&#39;s Blog🤦‍♂️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="记录一些自己的技术感悟和杂文">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lee&#39;s Blog🤦‍♂️">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="WWDC21 10012 - App Clip 新特性 本文基于 Session 10012 - What’s new in App Clips 梳理 引子 App Clip 是 WWCD20 的一大亮点。作为轻量级应用，它提供了一种“即时使用”的方式，用户无需在 App Store 下载完整的应用程序，基于苹果提供的各种唤醒方式，让用户在特定场景下很方便地体验 App 内的核心功能。 现在一年过">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WWDC21 App Clip 新特性">
+<meta property="og:url" content="http://example.com/2022/02/20/WWDC21-App-Clip-%E6%96%B0%E7%89%B9%E6%80%A7/index.html">
 <meta property="og:site_name" content="Lee&#39;s Blog🤦‍♂️">
-<meta property="og:description" content="记录一些自己的技术感悟和杂文">
+<meta property="og:description" content="WWDC21 10012 - App Clip 新特性 本文基于 Session 10012 - What’s new in App Clips 梳理 引子 App Clip 是 WWCD20 的一大亮点。作为轻量级应用，它提供了一种“即时使用”的方式，用户无需在 App Store 下载完整的应用程序，基于苹果提供的各种唤醒方式，让用户在特定场景下很方便地体验 App 内的核心功能。 现在一年过">
 <meta property="og:locale">
+<meta property="og:image" content="http://example.com/media/banner.png">
+<meta property="og:image" content="http://example.com/media/What">
+<meta property="og:image" content="http://example.com/WWDC21-App-Clip-%E6%96%B0%E7%89%B9%E6%80%A7/discover_app_clip.png">
+<meta property="og:image" content="http://example.com/WWDC21-App-Clip-%E6%96%B0%E7%89%B9%E6%80%A7/phoenix_clip_card.png">
+<meta property="og:image" content="http://example.com/media/phoenix_clip_card_2.png">
+<meta property="og:image" content="http://example.com/WWDC21-App-Clip-%E6%96%B0%E7%89%B9%E6%80%A7/phoenix_full_app.png">
+<meta property="og:image" content="http://example.com/media/tiktok_step_one.png">
+<meta property="og:image" content="http://example.com/media/tiktok_step_two.png">
+<meta property="og:image" content="http://example.com/media/tiktok_step_three.png">
+<meta property="og:image" content="http://example.com/media/Panera_bread_step_one.png">
+<meta property="og:image" content="http://example.com/media/Panera_bread_step_two.png">
+<meta property="og:image" content="http://example.com/media/Panera_bread_step_three.png">
+<meta property="og:image" content="http://example.com/media/Panera_bread_step_four.png">
+<meta property="og:image" content="http://example.com/media/Honk%E2%80%94%E2%80%94step_one.png">
+<meta property="og:image" content="http://example.com/media/Primer_step_one.png">
+<meta property="og:image" content="http://example.com/media/Primer_step_two.png">
+<meta property="og:image" content="http://example.com/media/banner_normal.png">
+<meta property="og:image" content="http://example.com/media/banner_card_style.png">
+<meta property="og:image" content="http://example.com/media/FoodGrid%E2%80%94%E2%80%94banner_stype_one.png">
+<meta property="og:image" content="http://example.com/media/card_mode_config.png">
+<meta property="og:image" content="http://example.com/media/FoodGrid%E2%80%94%E2%80%94card_stype_one.png">
+<meta property="og:image" content="http://example.com/media/FoodGrid%E2%80%94%E2%80%94card_stype_two.png">
+<meta property="og:image" content="http://example.com/media/demo_step_1.png">
+<meta property="og:image" content="http://example.com/media/demo_step_2.png">
+<meta property="og:image" content="http://example.com/media/demo_step_3.png">
+<meta property="og:image" content="http://example.com/media/demo_step_4.png">
+<meta property="og:image" content="http://example.com/media/demo_step_5-7.png">
+<meta property="og:image" content="http://example.com/media/app_clip_card_ino.png">
+<meta property="og:image" content="http://example.com/media/local_ex_1.png">
+<meta property="og:image" content="http://example.com/media/local_ex_2.png">
+<meta property="og:image" content="http://example.com/media/custome_clip_card.png">
+<meta property="og:image" content="http://example.com/media/wake_up_style.png">
+<meta property="og:image" content="http://example.com/media/app_clip_code%E2%80%94%E2%80%94all_style.png">
+<meta property="og:image" content="http://example.com/media/app_code_encode_logic.png">
+<meta property="og:image" content="http://example.com/media/all_style_code.png">
+<meta property="og:image" content="http://example.com/media/tool_download_info.png">
+<meta property="og:image" content="http://example.com/media/code_all_templates.png">
+<meta property="og:image" content="http://example.com/media/code_show_templates.png">
+<meta property="og:image" content="http://example.com/media/template_16.png">
+<meta property="og:image" content="http://example.com/2022/02/20/WWDC21-App-Clip-%E6%96%B0%E7%89%B9%E6%80%A7/media/wwdc20.svg">
+<meta property="og:image" content="http://example.com/media/custom_app_clip_code.png">
+<meta property="og:image" content="http://example.com/media/clear-messaging.png">
+<meta property="og:image" content="http://example.com/media/guidance_3.png">
+<meta property="og:image" content="http://example.com/media/guidance_2.png">
+<meta property="og:image" content="http://example.com/media/guidance_1.png">
+<meta property="article:published_time" content="2022-02-20T13:27:25.000Z">
+<meta property="article:modified_time" content="2022-02-20T13:37:26.508Z">
 <meta property="article:author" content="Lee">
+<meta property="article:tag" content="WWDC">
+<meta property="article:tag" content="App Clip">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/media/banner.png">
   
     <link rel="alternate" href="/atom.xml" title="Lee's Blog🤦‍♂️" type="application/atom+xml">
   
@@ -75,48 +125,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-test" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/20/test/" class="article-date">
-  <time class="dt-published" datetime="2022-02-20T13:42:07.000Z" itemprop="datePublished">2022-02-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/20/test/">test</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="a"><a href="#a" class="headerlink" title="a"></a>a</h2><p><img src="/media/app_clip_code%E2%80%94%E2%80%94all_style.png" alt="test"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/20/test/" data-id="ckzvbo3ls000eyvp6f7moglbl" data-title="test" class="article-share-link">Teilen</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-WWDC21-App-Clip-新特性" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-WWDC21-App-Clip-新特性" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/02/20/WWDC21-App-Clip-%E6%96%B0%E7%89%B9%E6%80%A7/" class="article-date">
   <time class="dt-published" datetime="2022-02-20T13:27:25.000Z" itemprop="datePublished">2022-02-20</time>
@@ -129,8 +138,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/20/WWDC21-App-Clip-%E6%96%B0%E7%89%B9%E6%80%A7/">WWDC21 App Clip 新特性</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      WWDC21 App Clip 新特性
     </h1>
   
 
@@ -294,60 +303,28 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-第一篇属于自己的博文" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2018/05/01/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E6%96%87/" class="article-date">
-  <time class="dt-published" datetime="2018-05-01T10:37:17.000Z" itemprop="datePublished">2018-05-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%9D%82%E6%96%87/">杂文</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2022/02/20/test/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
         
+          test
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2018/05/01/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E6%96%87/">第一篇属于自己的博文</a>
-    </h1>
   
+    <a href="/2018/05/01/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E6%96%87/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">第一篇属于自己的博文</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>手中还有四张牌了….</p>
-        
-          <p class="article-more-link">
-            <a href="/2018/05/01/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E6%96%87/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2018/05/01/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E6%96%87/" data-id="ckzvbo3lj0001yvp61auo16rb" data-title="第一篇属于自己的博文" class="article-share-link">Teilen</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%AA%E5%8A%9B/" rel="tag">努力</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82/" rel="tag">杂</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B4%A3%E4%BB%BB/" rel="tag">责任</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
 
 
 </section>
